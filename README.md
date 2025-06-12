@@ -1,9 +1,11 @@
 # Robot-Aided-Drafter
-General Description of Project:
+*Robot Workflow*
+The workflow starts with a black-and-white PNG or JPG of simple line art. A Python script ingests the image, uses OpenCV to threshold and skeletonize the drawing, and walks the skeleton to generate ordered (x, y , z) points. Each (x, y) pair is converted to SCARA joint angles (θ₁, θ₂) through inverse kinematics that account for the arm’s link lengths and the 147.5 ° mechanical offset on joint 2. The script writes the resulting triples {θ₁, θ₂, z} to `image_thetas.txt`.
 
-The workflow of our robot begins with the ingestion of PNG or JPG images, ideally featuring black and white, simple line art designs. These images are processed through our Python code, which utilizes OpenCV for contour detection and skeletonization to extract precise waypoints along the outlined paths. These waypoints are then converted into sets of joint angles (thetas) using sophisticated inverse kinematics algorithms. The resulting angle triples undergo validation using MATLAB code to ensure accuracy and optimal starting positions. Once validated, the angle data is formatted and integrated into the input angles file. Finally, the updated file is flashed onto the robot's controller using an ST-Link, enabling the SCARA plotting robot arm to execute the programmed movements faithfully and reproduce the original artistic designs with precision.
+The MATLAB utility `verify_thetas.m` loads that file, performs forward kinematics to reconstruct the end-effector path, and plots the trace so you can confirm start position, scale, and that no point falls outside the workspace. After any needed edits, you paste the validated angle triples into the firmware’s input-angles file (or a header such as `joint_inputs.h`). Re-building the project and flashing it via ST-Link updates `motors.c`, which homes the arm and streams each triple to the step-generation ISR. The result is a SCARA plot that faithfully reproduces the original sketch.
 
-Our Python Code, ImageToThetas:
+
+*Our Python Code, ImageToThetas:*
 
 The Python code is designed to facilitate the transformation of hand-sketched images, created using tools like MS Paint or Pixelbrush (Mac equivalent), or sourced from the internet. Leveraging OpenCV's powerful image processing capabilities, specifically contour detection, the code extracts and skeletonizes the outlines of these images. This process generates a series of discrete points that represent the skeletal structure of the sketches. These points are then processed through inverse kinematics algorithms to compute the corresponding joint angles (thetas). These angles are crucial for controlling a SCARA robot, enabling precise replication of the sketched paths. Ultimately, the code streamlines the conversion of creative hand-drawn designs into actionable robot movements, bridging digital creativity with real-world robotic execution.
 
