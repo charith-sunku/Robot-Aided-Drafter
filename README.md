@@ -1,5 +1,6 @@
 # Robot-Aided-Drafter
 *Robot Workflow*
+
 The workflow starts with a black-and-white PNG or JPG of simple line art. A Python script ingests the image, uses OpenCV to threshold and skeletonize the drawing, and walks the skeleton to generate ordered (x, y , z) points. Each (x, y) pair is converted to SCARA joint angles (θ₁, θ₂) through inverse kinematics that account for the arm’s link lengths and the 147.5 ° mechanical offset on joint 2. The script writes the resulting triples {θ₁, θ₂, z} to `image_thetas.txt`.
 
 The MATLAB utility `verify_thetas.m` loads that file, performs forward kinematics to reconstruct the end-effector path, and plots the trace so you can confirm start position, scale, and that no point falls outside the workspace. After any needed edits, you paste the validated angle triples into the firmware’s input-angles file (or a header such as `joint_inputs.h`). Re-building the project and flashing it via ST-Link updates `motors.c`, which homes the arm and streams each triple to the step-generation ISR. The result is a SCARA plot that faithfully reproduces the original sketch.
