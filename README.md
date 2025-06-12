@@ -1,5 +1,9 @@
 # Robot-Aided-Drafter
 
+Image conversion to thetas:
+
+The Python code is designed to facilitate the transformation of hand-sketched images, created using tools like MS Paint or Pixelbrush (Mac equivalent), or sourced from the internet. Leveraging OpenCV's powerful image processing capabilities, specifically contour detection, the code extracts and skeletonizes the outlines of these images. This process generates a series of discrete points that represent the skeletal structure of the sketches. These points are then processed through inverse kinematics algorithms to compute the corresponding joint angles (thetas). These angles are crucial for controlling a SCARA robot, enabling precise replication of the sketched paths. Ultimately, the code streamlines the conversion of creative hand-drawn designs into actionable robot movements, bridging digital creativity with real-world robotic execution.
+
 parse_png(path: str | Path) -> List[Tuple[float,float,int]]
 This function reads a PNG image from the specified path, extracts the skeleton of the image, and traverses its pixels to generate ordered (x,y,z) waypoints. Here, z=1 denotes a pen lift when transitioning between disconnected components in the image.
 
