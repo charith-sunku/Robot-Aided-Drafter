@@ -1,24 +1,18 @@
-name: Publish static HTML
+name: Doxygen → Pages
 on:
-  push:
-    branches: [ main ]
+  push: { branches: [ main ] }
   workflow_dispatch:
 
-permissions:
-  pages: write        # allow deployment
-  id-token: write     # OIDC auth
-
 jobs:
-  deploy:
+  docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write          # allows push to gh-pages
+
     steps:
-      - uses: actions/checkout@v4
-
-      # Create .nojekyll so folders with '_' work
-      - run: touch .nojekyll
-
-      - uses: actions/upload-pages-artifact@v3     # bundle everything
+      - uses: DenverCoder1/doxygen-github-pages-action@v2
         with:
-          path: .
-
-      - uses: actions/deploy-pages@v4              # push to Pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          config_file: Doxyfile     # or path/to/your file
+          folder: DoxyGen           # <── PUBLISH **THIS** FOLDER
+          branch: gh-pages          # Pages branch
