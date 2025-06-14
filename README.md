@@ -11,7 +11,7 @@ The files hosted in this repository are used to implement the Robot Aided Drafte
 
 ### DALI Robotic Plotter 3 DOF
 
-![Robot_Arm](https://github.com/user-attachments/assets/c616fc59-9f7a-4271-8a0e-a60f8165ad10)
+![resized](https://github.com/user-attachments/assets/730a999f-1c5a-4d92-98e8-063ccdc81a2e)
 
 ---
 
