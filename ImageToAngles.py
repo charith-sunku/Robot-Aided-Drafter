@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-@file        png_to_thetas_graphwalk.py
+@file        ImageToAngles.py
 @brief       Convert a black-on-white PNG drawing to SCARA waypoints.
 
 Every foreground (“ink”) pixel in the skeletonized PNG becomes one waypoint,
