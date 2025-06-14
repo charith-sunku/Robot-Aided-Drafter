@@ -54,5 +54,4 @@ dkms.conf
 # debug information files
 *.dwo
 
-# DoxyGen File
-//Need to Add
+# DoxyGen Folder
