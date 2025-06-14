@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{epsfig}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{newunicodechar}
+  \makeatletter
+    \def\doxynewunicodechar#1#2{%
+    \@tempswafalse
+    \edef\nuc@tempa{\detokenize{#1}}%
+    \if\relax\nuc@tempa\relax
+      \nuc@emptyargerr
+    \else
+      \edef\@tempb{\expandafter\@car\nuc@tempa\@nil}%
+      \nuc@check
+      \if@tempswa
+        \@namedef{u8:\nuc@tempa}{#2}%
+      \fi
+    \fi
+  }
+  \makeatother
+  \doxynewunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \doxynewunicodechar{²}{${}^{2}$}% Superscript two
+  \doxynewunicodechar{³}{${}^{3}$}% Superscript three
+
+\pagestyle{empty}
+\begin{document}
+\[
+- \cos\theta\_2 = \frac{x^2 + y^2 - L\_1^2 - L\_2^2}{2L\_1L\_2},\quad
+- \theta\_2 = \operatorname{atan2}(\pm\sqrt{1-\cos^2\theta\_2},,\cos\theta\_2)
+- \]
+\pagebreak
+
+\[
+- k\_1 = L\_1 + L\_2\cos\theta\_2,; k\_2 = L\_2\sin\theta\_2,;\theta\_1 =
+- \operatorname{atan2}(y,x) - \operatorname{atan2}(k\_2,k\_1)
+- \]
+\pagebreak
+
+\end{document}
