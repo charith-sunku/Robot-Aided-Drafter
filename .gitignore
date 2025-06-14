@@ -1,34 +1,32 @@
-# Prerequisites
+# Prerequisites / dependency files
 *.d
 
-# Object files
+# Object & ELF
 *.o
 *.ko
 *.obj
 *.elf
 
-# Linker output
+# Linker
 *.ilk
 *.map
 *.exp
 
-# Precompiled Headers
+# Pre-compiled headers
 *.gch
 *.pch
 
-# Libraries
+# Static / shared libraries
 *.lib
 *.a
 *.la
 *.lo
-
-# Shared objects (inc. Windows DLLs)
 *.dll
 *.so
 *.so.*
 *.dylib
 
-# Executables
+# Executables / binary images
 *.exe
 *.out
 *.app
@@ -36,13 +34,16 @@
 *.x86_64
 *.hex
 
-# Debug files
+# GCC split-DWARF
+*.dwo
+
+# Debug symbol folders & files
 *.dSYM/
 *.su
 *.idb
 *.pdb
 
-# Kernel Module Compile Results
+# Linux kernel-module intermediates
 *.mod*
 *.cmd
 .tmp_versions/
@@ -51,7 +52,12 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# debug information files
-*.dwo
+# Doxygen output (HTML + LaTeX, etc.)
+Docs/**
+# If you generate directly into 'docs/html', ignore sub-folders too
 
-# DoxyGen Folder
+# Misc editor / OS files
+*.swp
+*~
+.DS_Store
+Thumbs.db
