@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['main_0',['main',['../namespace_image_to_angles.html#abd7f6be8b18601cdc8014bc0a136ed0d',1,'ImageToAngles.main()'],['../main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main():&#160;main.c']]],
+  ['main_20c_20tt_20workflow_1',['3.1.1 &lt;tt&gt;main.c&lt;/tt&gt; Workflow',['../index.html#autotoc_md14',1,'']]],
+  ['main_2ec_2',['main.c',['../main_8c.html',1,'']]],
+  ['main_2eh_3',['main.h',['../main_8h.html',1,'']]],
+  ['mainpage_4',['mainpage',['../md__c_1_2_users_2dgfea_2_cal_01_poly_2_charith_01_sai_01_sunku_01-_01507_01_project_01_repositorf9952a4ea08f634bdb771d2fb3796320.html',1,'']]],
+  ['major_20hardware_5',['2. Major Hardware',['../index.html#autotoc_md2',1,'']]],
+  ['mapping_20offset_20angle_20image_20to_20angles_20python_20tt_20imagetoangles_20py_20tt_6',['3.1.5 Workspace Mapping &amp; Offset Angle Image To Angles Python (&lt;tt&gt;ImageToAngles.py&lt;/tt&gt;)',['../index.html#autotoc_md17',1,'']]],
+  ['mathematical_20and_20physical_20modeling_7',['4. Mathematical and Physical Modeling',['../index.html#autotoc_md26',1,'']]],
+  ['matlab_20validation_20script_20tt_20verify_5fangles_20mlx_20tt_8',['3.3 MATLAB Validation Script (&lt;tt&gt;verify_angles.mlx&lt;/tt&gt;)',['../index.html#autotoc_md21',1,'']]],
+  ['measured_20after_20assembly_9',['This guarantees all generated waypoints fall inside the robot’s reachable XY envelope, while &lt;tt&gt;OFFSET_T2_DEG&lt;/tt&gt; aligns the computed θ₂ with the actual elbow zero measured after assembly.',['../index.html#autotoc_md18',1,'']]],
+  ['memmanage_5fhandler_10',['MemManage_Handler',['../stm32f4xx__it_8h.html#a3150f74512510287a942624aa9b44cc5',1,'MemManage_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a3150f74512510287a942624aa9b44cc5',1,'MemManage_Handler(void):&#160;stm32f4xx_it.c']]],
+  ['mlx_20tt_11',['3.3 MATLAB Validation Script (&lt;tt&gt;verify_angles.mlx&lt;/tt&gt;)',['../index.html#autotoc_md21',1,'']]],
+  ['modeling_12',['4. Mathematical and Physical Modeling',['../index.html#autotoc_md26',1,'']]],
+  ['mot_5ftim3_5firqhandler_13',['MOT_TIM3_IRQHandler',['../motors_8c.html#a53c67a10e4287d506cc8066bd5f6bcd6',1,'motors.c']]],
+  ['motion_20engine_20tt_20motors_20c_20tt_14',['3.1.2 Motion Engine (&lt;tt&gt;motors.c&lt;/tt&gt;)',['../index.html#autotoc_md15',1,'']]],
+  ['motors_20and_20actuators_15',['2.2 Motors and Actuators',['../index.html#autotoc_md5',1,'']]],
+  ['motors_20c_20tt_16',['3.1.2 Motion Engine (&lt;tt&gt;motors.c&lt;/tt&gt;)',['../index.html#autotoc_md15',1,'']]],
+  ['motors_2ec_17',['motors.c',['../motors_8c.html',1,'']]],
+  ['motorsdisable_18',['motorsDisable',['../motors_8c.html#a6f74167be5ab173f4a85506d95de200e',1,'motors.c']]],
+  ['motorsenable_19',['motorsEnable',['../motors_8c.html#acdda0d8e8c65f2515e7f4ccca699052a',1,'motors.c']]],
+  ['motorshome_20',['motorsHome',['../motors_8c.html#af8bbfbf025b1469fcc30fa505cd060f7',1,'motors.c']]],
+  ['motorsrunsplineplan_21',['motorsRunSplinePlan',['../motors_8c.html#a7e113d4d1b0da45af803b78cca986e10',1,'motors.c']]],
+  ['moveservopulse_22',['moveServoPulse',['../motors_8c.html#aa4457959cc0418738d14efadacf99faa',1,'motors.c']]]
+];
