@@ -1,12 +1,14 @@
 # Robot-Aided-Drafter
 *Robot Workflow*
 
-The workflow starts with a black-and-white PNG or JPG of simple line art. A Python script ingests the image, uses OpenCV to threshold and skeletonize the drawing, and walks the skeleton to generate ordered (x, y , z) points. Each (x, y) pair is converted to SCARA joint angles (θ₁, θ₂) through inverse kinematics that account for the arm’s link lengths and the 147.5 ° mechanical offset on joint 2. The script writes the resulting triples {θ₁, θ₂, z} to `image_thetas.txt`.
+The files hosted in this repository are used to implement the Robot Aided Drafter. 
 
-The MATLAB utility `verify_thetas.m` loads that file, performs forward kinematics to reconstruct the end-effector path, and plots the trace so you can confirm start position, scale, and that no point falls outside the workspace. After any needed edits, you paste the validated angle triples into the firmware’s input-angles file (or a header such as `joint_inputs.h`). Re-building the project and flashing it via ST-Link updates `motors.c`, which homes the arm and streams each triple to the step-generation ISR. The result is a SCARA plot that faithfully reproduces the original sketch.
+More in-depth details regarding the project can be found here: https://charith-sunku.github.io/Robot-Aided-Drafter/
 
 
-*Our Python Code, ImageToThetas:*
+*Image Parsing* - Our Python script takes .png and .jpg files as inputs. Using OpenCV and our inverse kinematics algorithm, outputs a list of joint angles to draw the image.
+*Output Verification* - Using MATLAB, we verify the the fidelity of the processed drawing by simulating the robots motion and tool path.
+*Robot Motion* - Our C based codebase interfaces with low-level hardware to actuate the robot by reading the joint angles outputted from Python. 
 
 The Python code is designed to facilitate the transformation of hand-sketched images, created using tools like MS Paint or Pixelbrush (Mac equivalent), or sourced from the internet. Leveraging OpenCV's powerful image processing capabilities, specifically contour detection, the code extracts and skeletonizes the outlines of these images. This process generates a series of discrete points that represent the skeletal structure of the sketches. These points are then processed through inverse kinematics algorithms to compute the corresponding joint angles (thetas). These angles are crucial for controlling a SCARA robot, enabling precise replication of the sketched paths. Ultimately, the code streamlines the conversion of creative hand-drawn designs into actionable robot movements, bridging digital creativity with real-world robotic execution.
 
