@@ -74,7 +74,9 @@ PROJECT_ICON           =
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = "C:/Users/dgfea/Cal Poly/Charith Sai Sunku - 507 Project Repository/Drawing Robot/Core/Doxy_Output"
+# --- Doxygen output folders -----------------------------------------
+OUTPUT_DIRECTORY = docs     # folder created inside the repo checkout
+HTML_OUTPUT      = html     # final HTML ends up in docs/html/
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create up to 4096
 # sub-directories (in 2 levels) under the output directory of each output format
