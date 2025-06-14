@@ -15,9 +15,9 @@ visited in depth-first order along the pixel-adjacency graph.  The result is:
 
 @par Example
 @code
-python png_to_thetas_graphwalk.py farmer.png               # full resolution
-python png_to_thetas_graphwalk.py farmer.png --px-skip 3   # coarser skip
-python png_to_thetas_graphwalk.py farmer.png --min-dist 0.1  # ≥0.1 in apart
+python ImageToAngles.py shark.png               # full resolution
+python ImageToAngles.py shark.png --px-skip 3   # coarser skip
+python ImageToAngles.py shark.png --min-dist 0.1  # ≥0.1 in apart
 @endcode
 """
 
