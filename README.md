@@ -10,11 +10,7 @@ The files hosted in this repository are used to implement the Robot Aided Drafte
 ### Quick Features
 * Code Repo for the RRP 3 DOF Robotic Plotter.  
 
-</td><td>
-
-<img src="robotarm_cad.png" width="320" alt="CAD render"/>
-
-</td></tr></table>
+![Robot_Arm](https://github.com/user-attachments/assets/c616fc59-9f7a-4271-8a0e-a60f8165ad10)
 
 ---
 
@@ -49,14 +45,3 @@ The files hosted in this repository are used to implement the Robot Aided Drafte
    Safety is handled in real-time (limit switches + ultrasonic sensor).
 
 ---
-
-## Building / Flashing
-
-```bash
-# prerequisites
-sudo apt install gcc-arm-none-eabi stlink-tools make
-
-cd Src
-make             # builds *.elf and *.bin
-st-flash write build/firmware.bin 0x08000000
-
